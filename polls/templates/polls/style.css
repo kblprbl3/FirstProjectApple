@@ -1,0 +1,28 @@
+<style>
+    .collapse{
+        display: flex;
+        justify-content: space-between;
+        justify-content: space-around;
+    }
+    #naz{
+
+
+        color: firebrick;
+        font-size: 50px;
+        align-text: center;
+    }
+    .asd{
+        text-align: center;
+        display: inline;
+        justify-content: center;
+        justify-content: space-around;
+        border: 1px solid gold;
+        width: 400px;
+        height: 70px;
+        background-color: pink;
+        color: firebrick;
+        font-size: 50px;
+    }
+
+
+</style>
