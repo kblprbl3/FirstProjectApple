@@ -3,26 +3,29 @@
 <head>
   <title>apple</title>
   <meta charset="utf-8">
+   <style>
+       .bg-1
+    {
+        background-color: #343A40;; /*green */
+        color: #ffffff;
+    }
+       .bg-2
+    {
+        background-color: #343A40;; /*green */
+        color: #ffffff;
+    }
+       .bg-3
+    {
+        background-color: #343A40;; /*green */
+        color: #ffffff;
+    }
+
+   </style>
+
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <link rel="stylesheet" href="style.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <script src="script1.js"></script>
-  <script>
-    $(document).ready(function(){
-        $('.mac').click(function(){
-          var informacii = $(this).data('info');
-          var photo = $(this).data('foto');
-          $('.bl').html(informacii);
-          $('.ft').attr('src', photo);
-        });
-     });
-  </script>
 </head>
 <body>
 
@@ -34,17 +37,16 @@
   <div class="collapse navbar-collapse" id="collapsibleNavbar">
     <ul class="navbar-nav">
       <li class="nav-item">
-        <a class="mac" data-info="bla bla blaa"
-           data-foto="https://cdn2.macworld.co.uk/cmsdata/slideshow/3636548/which-mac-to-buy_thumb800.jpg">Mac</a>
+        <a class="nav-item" href="mac.html">Mac</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Ipad</a>
+        <a class="nav-link" href="ipad.html">Ipad</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Iphone</a>
+        <a class="nav-link" href="iphone.html">Iphone</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">About</a>
+        <a class="nav-link" href="about.html">About</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#">Contact</a>
@@ -53,47 +55,61 @@
   </div>
 </nav>
 <br>
-<div class="container">
-  <div id="myCarousel" class="carousel slide" data-ride="carousel">
-    <!-- Indicators -->
-    <ol class="carousel-indicators">
-      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-      <li data-target="#myCarousel" data-slide-to="1"></li>
-      <li data-target="#myCarousel" data-slide-to="2"></li>
-    </ol>
-
-    <!-- Wrapper for slides -->
-    <div class="carousel-inner">
-
-      <div class="item active">
-        <img src="C:\Users\Kenzhebaev\PycharmProjects\FirstProjectApple\polls\static\polls\1.jpg" alt="mesto dlia slideshow" style="width: 600px; height: 300px;">
-        <div class="carousel-caption">
-          <p style="font-size: 20px; color: firebrick;">mac</p>
-        </div>
-      </div>
-
-      <div class="item">
-        <img src="C:\Users\Kenzhebaev\PycharmProjects\FirstProjectApple\polls\static\polls\2.jpg" style="width: 600px; height: 300px;">
-        <div class="carousel-caption">
-          <p style="font-size: 20px; color: springgreen;">ipad</p>
-        </div>
-      </div>
-    
-      <div class="item">
-        <img src="C:\Users\Kenzhebaev\PycharmProjects\FirstProjectApple\polls\static\polls\3.jpg" style="width: 600px; height: 300px;">
-        <div class="carousel-caption">
-          <p style="font-size: 20px; color: yellow;">iphone</p>
-        </div>
-      </div>
-  </div>
+<div class="container-fluid bg-1 text-center">
+{% load static %}
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+  </ol>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img class="d-block w-100" src="{% static "polls/news/macbook.jpeg" %}" alt="First slide">
     </div>
-</div><br><br><br>
+    <div class="carousel-item">
+      <img class="d-block w-100" src="{% static "polls/news/ipad-pro-hero.jpg" %}" alt="Second slide">
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100" src="{% static "polls/news/iphone-10.jpg" %}" alt="Third slide">
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+</div>
+<div class="container-fluid bg-2 text-center">
+    Hello
+    <img src="{% static "polls/fon.jpg" %}">
+    Second
+</div>
+<div class="container-fluid bg-1 text-center">
+     <img src="{% static "polls/fon.jpg" %}">
+    Third
+</div>
+<br><br><br>
 
 <div class="bl"></div>
 <div><img src="" class="ft"></div>
 <div class="asd">
 <p id="naz"> hello world</p>
 </div>
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="script1.js"></script>
 </body>
 </html>
 
